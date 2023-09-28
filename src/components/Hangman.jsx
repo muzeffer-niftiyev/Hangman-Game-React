@@ -6,9 +6,12 @@ import img_4 from "../images/hangman-4.svg";
 import img_5 from "../images/hangman-5.svg";
 import img_6 from "../images/hangman-6.svg";
 
-const Hangman = () => {
-  return <>
-  <img src={img_0} alt="" /></>;
+const Hangman = ({ incorrect }) => {
+  return (
+    <>
+      <img src={img_0} alt="" />
+    </>
+  );
 };
 
 export default Hangman;

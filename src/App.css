@@ -36,14 +36,11 @@ body {
   width: 440px;
 }
 
-.letters {
-  margin-top: 25px;
-}
-
 .letters button {
   margin: 3px;
-  width: 40px;
+  width: 50px;
   height: 40px;
+  border-radius: 5px;
   color: #fff;
   font-weight: bold;
   cursor: pointer;
@@ -63,7 +60,7 @@ body {
 }
 
 .content .word {
-  font-size: 35px;
+  font-size: 45px;
   color: #333;
 }
 
@@ -88,4 +85,32 @@ body {
 .hint_header {
   font-size: 25px;
   font-weight: bold;
+}
+
+.incorrect_letters {
+  display: flex;
+  height: 20px;
+  font-size: 30px;
+  gap: 15px;
+  color: #333;
+  font-weight: bold;
+}
+
+.incorrect_letter {
+  position: relative;
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.incorrect_letter::before {
+  content: "";
+  background-color: rgb(216, 21, 21);
+  position: absolute;
+  bottom: 40%;
+  left: -30%;
+  width: 150%;
+  height: 4px;
+  transform: rotate(-45deg);
 }

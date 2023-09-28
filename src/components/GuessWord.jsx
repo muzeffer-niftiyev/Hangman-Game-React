@@ -1,6 +1,4 @@
-import { useEffect, useState } from "react";
-
-const GuessWord = ({ word, hint, incorrect }) => {
+const GuessWord = ({ word, hint}) => {
   return (
     <div className="content">
       <div className="word">{word}</div>
@@ -8,10 +6,6 @@ const GuessWord = ({ word, hint, incorrect }) => {
       <div className="hint">
         <div className="hint_header">💡 Hint</div>
         <div>{hint}</div>
-      </div>
-
-      <div className="incorrect">
-        Incorrect guesses: <span>{incorrect} / 6</span>
       </div>
     </div>
   );

@@ -1,7 +1,12 @@
-import letters from "../lettersData";
+import letters from "../data/lettersData";
 import { useState } from "react";
 
-const Letters = ({ word, setIncorrect, setWordFormat, wordFormat }) => {
+const Letters = ({
+  word,
+  setIncorrect,
+  setWordFormat,
+  setIncorrectLetters,
+}) => {
   const [isWrongLetter, setIsWrongLetter] = useState(false);
 
   const handleLetterClick = (btn) => {
@@ -10,12 +15,15 @@ const Letters = ({ word, setIncorrect, setWordFormat, wordFormat }) => {
     if (!word.includes(btn.letter?.toLowerCase())) {
       setIsWrongLetter(true);
       setIncorrect((incorrect) => incorrect + 1);
+      setIncorrectLetters((prev) => [...prev, btn.letter]);
     } else {
       setWordFormat((prev) => {
         return word
           .split("")
           .map((item, index) =>
-            item === btn.letter.toLowerCase() ? item.toUpperCase() : prev[index]
+            btn.letter.toLowerCase() === item
+              ? item.toUpperCase()
+              : prev.split(" ")[index]
           )
           .join(" ");
       });

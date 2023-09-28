@@ -163,6 +163,18 @@ const wordList = [
     word: "brilliant",
     hint: "Exceptionally clever.",
   },
+  {
+    word: "library",
+    hint: "Building where people read books.",
+  },
+  {
+    word: "gold",
+    hint: 'A valuable metal'
+  },
+  {
+    word: 'office',
+    hint: 'A room used for work.'
+  }
 ];
 
 

@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 const IncorrectGuesses = ({ incorrect, incorrectLetters }) => {
   return (
     <>
@@ -10,8 +8,8 @@ const IncorrectGuesses = ({ incorrect, incorrectLetters }) => {
       <div className="incorrect_letters">
         {incorrectLetters.map((letter) => {
           return (
-            <div className="incorrect_letter">
-              <p>{letter}</p>
+            <div key={letter.id} className="incorrect_letter">
+              <p>{letter.letter}</p>
             </div>
           );
         })}

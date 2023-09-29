@@ -14,6 +14,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .container {
@@ -33,18 +34,18 @@ body {
   flex-direction: column;
   gap: 30px;
   text-align: center;
-  width: 440px;
+  width: 480px;
 }
 
 .letters button {
   margin: 3px;
-  width: 50px;
+  width: 55px;
   height: 40px;
-  border-radius: 5px;
+  border-radius: 7px;
   color: #fff;
   font-weight: bold;
   cursor: pointer;
-  font-size: 19px;
+  font-size: 20px;
   border: 2px solid rgb(38, 78, 212);
   background: linear-gradient(
     45deg,
@@ -113,4 +114,84 @@ body {
   width: 150%;
   height: 4px;
   transform: rotate(-45deg);
+}
+
+.win_modal,
+.lose_modal {
+  position: absolute;
+  background-color: rgb(21, 146, 177);
+  border: 3px solid rgb(23, 123, 148);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-direction: column;
+  top: 40%;
+  left: 43%;
+  width: 300px;
+  height: 170px;
+  border-radius: 9px;
+  padding: 20px;
+  z-index: 11111111;
+}
+
+.lose_modal {
+  background-color: rgb(241, 82, 24);
+  border: 3px solid rgb(175, 63, 23);
+  height: 200px;
+}
+
+.lose_modal h3 {
+  color: #eee !important;
+}
+
+.lose_modal p {
+  color: #eee !important;
+}
+
+.win_modal h3,
+.lose_modal h3 {
+  font-size: 26px;
+  color: #333;
+}
+
+.win_modal p,
+.lose_modal p {
+  font-size: 19px;
+  font-weight: bold;
+  color: #333;
+}
+
+.win_modal button,
+.lose_modal button {
+  background-color: rgb(34, 163, 62);
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 10px 20px;
+  border: 2px solid rgb(54, 134, 30);
+  font-size: 18px;
+  font-weight: bold;
+  color: #eee;
+}
+
+.overlay {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(4px);
+  z-index: 11111;
+}
+
+.score {
+  margin: auto;
+  text-align: center;
+  background-color: #eee;
+  margin-bottom: 30px;
+  width: 40%;
+  color: #333;
+  font-size: 23px;
+  border-radius: 7px;
 }

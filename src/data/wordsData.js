@@ -169,13 +169,44 @@ const wordList = [
   },
   {
     word: "gold",
-    hint: 'A valuable metal'
+    hint: "A valuable metal",
   },
   {
-    word: 'office',
-    hint: 'A room used for work.'
-  }
+    word: "office",
+    hint: "A room used for work.",
+  },
+  {
+    word: "javascript",
+    hint: "A programming language.",
+  },
+  {
+    word: "english",
+    hint: "Most spoken language.",
+  },
+  {
+    word: "crocodile",
+    hint: "Animal living in water.",
+  },
+  {
+    word: "unexpectable",
+    hint: "Surprising.",
+  },
+  {
+    word: "pillow",
+    hint: "We put our head on it.",
+  },
+  {
+    word: "disagree",
+    hint: "Conflict.",
+  },
+  {
+    word: "exhausted",
+    hint: "Tired.",
+  },
+  {
+    word: "expensive",
+    hint: "Costing a lot of money.",
+  },
 ];
-
 
 export default wordList;

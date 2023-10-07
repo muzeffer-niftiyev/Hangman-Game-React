@@ -59,8 +59,8 @@ const App = () => {
     setWordFormat(() => "_ ".repeat(wordList[newWord]?.word.length));
     setIncorrect(0);
     setIncorrectLetters([]);
-    setLostGame(false);
-    setWonGame(false);
+    setLostGame(() => false);
+    setWonGame(() => false);
     setScore((prev) => prev + score);
     letters.map((letter) => (letter.disabled = false));
   };

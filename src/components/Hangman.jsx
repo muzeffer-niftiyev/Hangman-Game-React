@@ -7,10 +7,11 @@ import img_4 from "../images/hangman-4.svg";
 import img_5 from "../images/hangman-5.svg";
 import img_6 from "../images/hangman-6.svg";
 
+const imgArr = [img_0, img_1, img_2, img_3, img_4, img_5, img_6];
+
 const Hangman = ({ incorrect }) => {
   const [img, setImg] = useState("");
 
-  const imgArr = [img_0, img_1, img_2, img_3, img_4, img_5, img_6];
   useEffect(() => {
     setImg(() => imgArr[incorrect]);
   }, [incorrect]);

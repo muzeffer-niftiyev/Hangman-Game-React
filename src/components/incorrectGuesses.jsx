@@ -19,3 +19,4 @@ const IncorrectGuesses = ({ incorrect, incorrectLetters }) => {
 };
 
 export default IncorrectGuesses;
+

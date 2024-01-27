@@ -3,3 +3,4 @@ const Score = ({ score }) => {
 };
 
 export default Score;
+

@@ -12,3 +12,4 @@ const GuessWord = ({ word, hint}) => {
 };
 
 export default GuessWord;
+

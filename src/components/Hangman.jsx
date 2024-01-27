@@ -20,3 +20,4 @@ const Hangman = ({ incorrect }) => {
 };
 
 export default Hangman;
+

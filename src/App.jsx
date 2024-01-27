@@ -1,14 +1,14 @@
-import GuessWord from "./components/GuessWord";
-import Letters from "./components/Letters";
-import "./App.css";
-import { useEffect, useState } from "react";
+import "./app.css";
+import Score from "./components/score";
 import wordList from "./data/wordsData";
-import Hangman from "./components/Hangman";
-import IncorrectGuesses from "./components/IncorrectGuesses";
-import WinModal from "./components/WinModal";
-import LoseModal from "./components/LoseModal";
-import Score from "./components/Score";
 import letters from "./data/lettersData";
+import Hangman from "./components/hangman";
+import Letters from "./components/letters";
+import { useEffect, useState } from "react";
+import GuessWord from "./components/guessWord";
+import WinModal from "./components/modals/winModal";
+import LoseModal from "./components/modals/loseModal";
+import IncorrectGuesses from "./components/incorrectGuesses";
 
 const App = () => {
   const [word, setWord] = useState("");
@@ -28,7 +28,7 @@ const App = () => {
   }, []);
 
   useEffect(() => {
-    const checkIfWon = wordFormat.split(" ").every((item) => item !== "_");
+    const checkIfWon = wordFormat.split(" ").every((item) => item && item !== "_");
     if (checkIfWon) {
       setWonGame((prev) => !prev);
     }

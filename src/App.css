@@ -54,6 +54,15 @@ body {
   );
 }
 
+.letters button:disabled{
+  border: 2px solid rgb(49, 88, 214);
+  background: linear-gradient(
+    60deg,
+    rgb(105, 172, 235),
+    rgba(58, 89, 134, 0.87)
+  );
+}
+
 .content {
   display: flex;
   flex-direction: column;
